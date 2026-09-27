@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Offline-first personal mistake notebook">
+<link rel="manifest" href="./manifest.json">
+<link rel="stylesheet" href="./styles.css">
+<title>Mistake Notebook</title>
+</head>
+<body>
+<div id="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">M</div>
+      <div><strong>Mistake</strong><span>Notebook</span></div>
+    </div>
+    <nav id="nav"></nav>
+    <div class="sidebar-foot">
+      <span class="sync-dot" id="syncDot"></span>
+      <span id="syncText">Offline local</span>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn" title="Menu">☰</button>
+      <div class="breadcrumbs" id="breadcrumbs">Dashboard</div>
+      <div class="top-actions">
+        <button class="ghost-btn" id="globalSearchBtn">⌕ Search <kbd>Ctrl K</kbd></button>
+        <button class="primary-btn" id="addTopBtn">＋ Add Mistake <kbd>Ctrl N</kbd></button>
+      </div>
+    </header>
+    <section class="content" id="content"></section>
+  </main>
+</div>
+
+<div id="modalRoot"></div>
+<div id="toastRoot"></div>
+<input type="file" id="imageInput" accept="image/*" multiple hidden>
+<script src="./app.js"></script>
+</body>
+</html>
